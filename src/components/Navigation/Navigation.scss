@@ -1,0 +1,111 @@
+.navigation {
+  background: #623e63; // Изменен цвет фона навигационной панели
+  border-bottom: 1px solid #e5e5e7;
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media (max-width: 767px) {
+      padding: 0 12px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    gap: 32px;
+
+    @media (max-width: 991px) {
+      height: 40px;
+      gap: 24px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  &__all {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff; // Изменен цвет текста на белый для контраста
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(129, 101, 130, 0.8); // Добавлен фон при наведении
+      opacity: 1; // Убедитесь, что непрозрачность установлена на полную
+      color: #fff; // Цвет текста при наведении остается белым
+    }
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
+  }
+
+  &__arrow {
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -4px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 991px) {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+
+    &:hover {
+      color: rgba(
+        255,
+        255,
+        255,
+        0.8
+      ); // Цвет текста при наведении остается белым с небольшой прозрачностью
+      background-color: rgba(129, 101, 130, 0.8); // Добавлен фон при наведении
+      opacity: 0.9; // Убедитесь, что непрозрачность установлена на почти полную
+    }
+
+    &--sale {
+      color: #623e63;
+      font-weight: 500;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 13 px;
+    }
+  }
+}
